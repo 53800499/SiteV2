@@ -1,0 +1,25 @@
+
+
+
+.navbar{
+    /* padding: 30px; */
+}
+
+#carousel-section {
+    position: relative;
+    z-index: -1; /* Met la section derrière la navbar */
+}
+
+.navbar-custom {
+    background-color: white;
+    border-bottom: 1px solid #e1e1e1;
+}
+.icon {
+    color: #B87333; /* Brown-like color */
+}
+.navbar-text {
+    font-size: 12px;
+    }
+.navbar-brand-logo {
+    height: 40px;
+}
