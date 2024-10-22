@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="js/style.css">
     
 </head>
@@ -87,32 +89,24 @@
             </a>
         </div>
     </section>
-    <section class="">
-        <div class="container-fluid wood-background ">
-            <div class="row menuisier bg-white py-5 h-full">
-                <h1 class="section-text d-flex justify-content-center mt-0">Menuisier, Ébéniste, Artisan d’Art</h1>
+    <section class="row m-0.5">
+        <div class="container-fluid wood-background">
+            <div class="row">
+              <!-- Colonne texte -->
+              <div class="col-md-7 col-12 p-3 paragraph">
+                <p>Fondée il y a 24 ans à Saint-Martin, Johnny Wood Work</p>
+                <p>Johnny Wood Work est une entreprise de menuiserie reconnue pour son savoir-faire et son engagement envers la qualité.</p>
+                <p>Spécialisée dans la conception sur mesure de meubles, charpentes et aménagements intérieurs, elle propose des solutions adaptées aux besoins résidentiels, commerciaux ou industriels. Alliant tradition et modernité, l'équipe qualifiée garantit des réalisations uniques et durables pour chaque projet.</p>
+              </div>
+          
+              <!-- Colonne vidéo -->
+              <div class="col-md-4 col-12 mt-3 mt-md-0 d-flex justify-content-center align-items-center">
+                <video controls src="video/generik.mp4" alt="generik" class="w-100" style="max-width: 100%; height: auto;">
+                </video>
+              </div>
             </div>
-            <div class="row d-flex justify-content-center align-items-center h-100 py-xl-5 m-auto">
-
-                <!-- Section texte -->
-                <div class="col-md-7 p-5 paragraph">
-                    <p>Fondée il y a 24 ans à Saint-Martin, Johnny Wood Work</p>
-                    <p>Johnny Wood Work est une entreprise de menuiserie reconnue pour son savoir-faire et son engagement envers la qualité.</p>
-                    <p>Spécialisée dans la conception sur mesure de meubles, charpentes et aménagements intérieurs, elle propose des solutions adaptées aux besoins résidentiels, commerciaux ou industriels. Alliant tradition et modernité, l'équipe qualifiée garantit des réalisations uniques et durables pour chaque projet.</p>
-                </div>
-                <!-- Section vidéo -->
-                <div class="col-md-4  ">
-                    <div class="video-placeholder w-50 h-50 rounded-5">
-                        <video src="video/generik.mp4" alt="generik">
-                        <!-- <div class="video-play-button">
-                            <i class="bi bi-play-circle"></i> 
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-            <div class="row menuisiers  py-5 ">
-            </div>
-        </div>
+          </div>
+          
 
     </section>
     
@@ -238,10 +232,19 @@
         </div>
         
     </section>
-    
-    
-
-
+    <script>
+        // Sélectionner l'élément avec la classe "wood-background"
+        const woodBackground = document.querySelector('.wood-background');
+      
+        // Appliquer l'effet de parallaxe au défilement
+        window.addEventListener('scroll', function() {
+          let scrollPosition = window.scrollY; // Position de défilement actuelle
+          let delay = 0.5; // Délai dans l'effet de parallaxe
+      
+          // Appliquer un léger décalage de déplacement à l'image de fond
+          woodBackground.style.backgroundPositionY = -(scrollPosition * delay) + 'px';
+        });
+      </script>
 <!-- Bootstrap JS et Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Icones Bootstrap -->

@@ -23,13 +23,25 @@
 
 /* Menusier */
 
-.wood-background {
-    background-image: url('/src/img/wood-2045380_1280.jpg'); /* Utilisez une image de bois si disponible */
+ .wood-background {
+    background-image: url('/src/img/wood-2045380_1280.jpg'); 
     background-size: cover;
     background-position: center;
-    color: white;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    overflow: hidden; 
+     
 }
-
+.paragraph{
+    
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    justify-content: center;
+    z-index: 10;
+}
+ */
 .section-text, .text  {
     color: #7a5230; /* Couleur approximative du bois */    
 }
