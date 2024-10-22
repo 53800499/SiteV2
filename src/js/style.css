@@ -34,14 +34,13 @@
      
 }
 .paragraph{
-    
     color: white;
     text-align: center;
     font-size: 1.2rem;
     justify-content: center;
     z-index: 10;
 }
- */
+ 
 .section-text, .text  {
     color: #7a5230; /* Couleur approximative du bois */    
 }
