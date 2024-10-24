@@ -1,82 +1,226 @@
-
-
-
-.navbar-brand{
-    padding-left: 50px;
-    padding-right: 50px;
+/* Navbar Customizations */
+.navbar-brand {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .navbar-custom {
-    background-color: white;
-    border-bottom: 1px solid #e1e1e1;
+  background-color: white;
+  border-bottom: 1px solid #e1e1e1;
 }
+
 .icon {
-    color: #B87333; /* Brown-like color */
+  color: #B87333; /* Brown-like color */
 }
+
 .navbar-text {
-    font-size: 12px;
-    }
+  font-size: 12px;
+}
+
 .navbar-brand-logo {
-    height: 40px;
+  height: 40px;
 }
 
-
-/* Menusier */
-
- .wood-background {
-    background-image: url('/src/img/wood-2045380_1280.jpg'); 
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    position: relative;
-    /* z-index: 1; */
-    overflow: hidden; 
-     
-}
-.paragraph{
-    color: white;
-    text-align: center;
-    font-size: 1rem;
-    justify-content: center;
-    z-index: 10;
-}
- 
-.section-text, .text  {
-    color: #7a5230; /* Couleur approximative du bois */    
-}
-.menuisier{
-    clip-path: polygon(
-        0 0,        /* Point A : Coin supérieur gauche */
-        100% 0,     /* Point B : Coin supérieur droit */
-        100% 90%,  /* Point C : Coin inférieur droit */
-        70% 70%,    /* Point D : Premier point de courbe simulé, à 90% de la largeur et 80% de la hauteur */
-        0 100%      /* Point G : Coin inférieur gauche */
-    );
-    padding: 20px;
-    height: 150px;
-    }
-
-    .menuisiers{
-        clip-path: polygon(
-        0 40%,         /* Point A : Coin inférieur gauche (inversé) */
-        70% 0,         /* Point B : Premier point courbe simulé (inversé) */
-        100% 10%,        /* Point C : Coin supérieur droit */
-        100% 100%,     /* Point D : Coin inférieur droit */
-        0 100%         /* Point E : Coin inférieur gauche */
-    );
-    height: 150px;
-    }
-
-.paragraphs{
-    color: white;
-    font-size: 10px;
+/* Wood Background for Section */
+.wood-background {
+  background-image: url('/src/img/wood-2045380_1280.jpg');
+  background-size: cover;
+  background-position: center; /* Use 'center' instead of 'cover' for correct positioning */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
 }
 
+/* Paragraph Styling */
+.paragraph {
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+/* Carousel Item Styling */
+.carousel-item {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure images fill the slide container */
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navbar-custom {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.section-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+}
+
+.category-image {
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.category-images .bois {
+  background-color: transparent; /* Supprimer l'arrière-plan noir */
+  border: none; /* Optionnel: retirer la bordure si nécessaire */
+}
+
+.category-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.category-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* Video Placeholder */
+.video-placeholder {
+  max-width: 99%;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .wood-background {
+      height: 100vh; /* Set the section height to 100% of the screen on mobile */
+      overflow-y: auto; /* Allow scrolling if content exceeds height */
+  }
+  
+  .paragraph, .video-placeholder {
+      height: 50vh; /* Each element takes half of the screen height on mobile */
+      overflow-y: auto; /* Allow scrolling if text exceeds the height */
+  }
+}
+
+/* Text Section */
+.section-text, .text {
+  color: #7a5230; /* Approximate wood color */
+
+}
+
+/* Menusier Section */
+.menuisier {
+  clip-path: polygon(
+      0 0,        /* Point A: Top-left corner */
+      100% 0,     /* Point B: Top-right corner */
+      100% 90%,   /* Point C: Bottom-right corner */
+      70% 70%,    /* Point D: Curved point */
+      0 100%      /* Point E: Bottom-left corner */
+  );
+  padding: 20px;
+  height: 150px;
+}
+
+/* Menusiers Section */
+.menuisiers {
+  clip-path: polygon(
+      0 0,        /* Point A: Top-left corner */
+      100% 0,     /* Point B: Top-right corner */
+      100% 90%,   /* Point C: Bottom-right corner */
+      70% 70%,    /* Point D: Curved point */
+      0 100%      /* Point E: Bottom-left corner */
+  );
+  height: 150px;
+  background-color: white; /* Ensure white background applies */
+}
+
+/* Small Paragraph Styling */
+.paragraphs {
+  color: white;
+  font-size: 10px; /* Adjust font size for smaller text */
+}
+
+/* Custom Image */
 .custom-img {
-    width: 100%; /* Largeur pleine du conteneur */
-    height: 140px; /* Hauteur fixe pour toutes les images */
-    object-fit: cover; /* Couvrir l'élément sans déformation */
+  width: 100%; /* Full width of the container */
+  height: 140px; /* Fixed height for all images */
+  object-fit: cover; /* Ensure image covers the container without distortion */
 }
 
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
 
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
 
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
