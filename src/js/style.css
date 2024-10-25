@@ -1,9 +1,19 @@
+@font-face {
+    font-family: 'blacks';
+    src: url('/src/fonts/poppins-font/Poppins-Bold.ttf') format('truetype');
+    font-weight: normal; /* ou bold selon votre police */
+    font-style: normal; /* ou italic selon votre police */
+}
+@font-face {
+    font-family: 'bien';
+    src: url('/src/fonts/poppins-font/Poppins-Italic.ttf') format('truetype');
+    font-weight: normal; /* ou bold selon votre police */
+    font-style: normal; /* ou italic selon votre police */
+}
 
 
-
-.navbar-brand{
-    padding-left: 50px;
-    padding-right: 50px;
+*{
+    font-size: 1em;
 }
 
 .navbar-custom {
@@ -22,27 +32,26 @@
 
 
 /* Menusier */
-
- .wood-background {
+.wood-background {
     background-image: url('/src/img/wood-2045380_1280.jpg'); 
     background-size: cover;
+    background-attachment: fixed; /* Pour parallax */
     background-position: center;
-    height: 100vh;
-    position: relative;
-    /* z-index: 1; */
-    overflow: hidden; 
-     
+    color: white;
 }
+
+
 .paragraph{
     color: white;
-    text-align: center;
     font-size: 1rem;
     justify-content: center;
-    z-index: 10;
 }
  
 .section-text, .text  {
-    color: #7a5230; /* Couleur approximative du bois */    
+    color: #7a5230; /* Couleur approximative du bois blacks*/      
+    font-family: blacks;
+    font-size: 50px;
+  
 }
 .menuisier{
     clip-path: polygon(
@@ -64,7 +73,7 @@
         100% 100%,     /* Point D : Coin inférieur droit */
         0 100%         /* Point E : Coin inférieur gauche */
     );
-    height: 150px;
+    height: 90px;
     }
 
 .paragraphs{
@@ -76,6 +85,117 @@
     width: 100%; /* Largeur pleine du conteneur */
     height: 140px; /* Hauteur fixe pour toutes les images */
     object-fit: cover; /* Couvrir l'élément sans déformation */
+}
+
+.p-menu{
+    font-size: 1.3em;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+@media (max-width: 993px) {
+    .text{
+        font-size: 2.2rem;
+        padding-top: 0;
+    }
+    /* .joind-img{
+        margin-bottom: 10px;575
+    } */
+     .para{
+        font-size: 15px;
+     }
+     .bois{
+        width: 237px;
+     }
+}
+
+@media (max-width: 768px) {
+    .para{
+        font-size: unset;
+     }
+     .bois{
+        width: unset;
+        margin-bottom: 10px;
+     }
+}
+
+@media (max-width: 664px) {
+    .section-menu {
+        font-size: 2em;
+    }
+}
+@media (max-width: 610px) {
+    .section-menu {
+        font-size:30px ;
+    }
+    .menuisier{
+        clip-path: polygon(
+            0 0,        /* Point A : Coin supérieur gauche */
+            100% 0,     /* Point B : Coin supérieur droit */
+            100% 90%,  /* Point C : Coin inférieur droit */
+            70% 80%,    /* Point D : Premier point de courbe simulé, à 90% de la largeur et 80% de la hauteur */
+            0 100%      /* Point G : Coin inférieur gauche */
+        );
+        padding: 20px;
+        height: 150px;
+        }
+
+        .menuisiers{
+            clip-path: polygon(
+            0 50%,         /* Point A : Coin inférieur gauche (inversé) */
+            70% 0,         /* Point B : Premier point courbe simulé (inversé) */
+            100% 10%,        /* Point C : Coin supérieur droit */
+            100% 100%,     /* Point D : Coin inférieur droit */
+            0 100%         /* Point E : Coin inférieur gauche */
+        );
+        height: 90px;
+        }
+    
+}
+
+
+/* Définir l'animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0; /* Invisible au début */
+        transform: translateY(20px); /* Décalage vers le bas */
+    }
+    100% {
+        opacity: 1; /* Visible à la fin */
+        transform: translateY(0); /* Retour à la position d'origine */
+    }
+}
+
+/* Appliquer l'animation aux titres */
+.text {
+    animation: fadeInUp 0.7s ease-in-out forwards; /* Durée de l'animation et style */
+    opacity: 0; /* Assurez-vous qu'il est invisible au début */
+}
+
+/* Ajouter un délai d'animation pour les autres titres si nécessaire */
+h1 {
+    animation-delay: 0.3s; /* Délai avant que l'animation commence */
+}
+
+.text:hover {
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+    transition: transform 0.3s; /* Durée de l'effet de transition */
+}
+
+
+.video-placeholder {
+    position: relative; /* Pour le positionnement de l'élément vidéo */
+    overflow: hidden; /* Pour masquer tout débordement */
+}
+
+.video-placeholder video {
+    transition: transform 0.3s; /* Animation de transition */
+}
+
+.video-placeholder:hover video {
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
 }
 
 
