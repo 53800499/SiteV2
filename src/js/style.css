@@ -148,10 +148,38 @@ h1 {
             70% 0,         /* Point B : Premier point courbe simulé (inversé) */
             100% 10%,        /* Point C : Coin supérieur droit */
             100% 100%,     /* Point D : Coin inférieur droit */
-            0 100%         /* Point E : Coin inférieur gauche */
+            0 100%         /* Point E : Coin inférieur gauche 372*/
         );
         height: 90px;
         }
+    
+}
+
+@media (max-width: 372px) {
+    .navbar-brand-logo {
+        height: 40px;
+        width: 200px;
+        font-size: 1.3em;
+    } 
+    .text{
+       font-size: 1.7em;
+       text-align: start;
+       justify-content: baseline;
+    }
+    .menuisier{
+        *{
+            font-size: 1.2em;
+        }
+        font-size: 1.2em;
+        clip-path: polygon(
+             0 0,        /* Point A : Coin supérieur gauche */
+             100% 0,     /* Point B : Coin supérieur droit */
+             100% 85%,  /* Point C : Coin inférieur droit */
+             70% 80%,    /* Point D : Premier point de courbe simulé, à 90% de la largeur et 80% de la hauteur */
+             0 100%      /* Point G : Coin inférieur gauche */
+         ); 
+    }
+    
     
 }
 
