@@ -136,8 +136,8 @@ h1 {
     font-size: 3rem;
 }
 
-.footer{
-    font-size: 1.2pas em;
+footer{
+    font-size: 1.3em;
 }
 
 @media (min-width: 993px) {
