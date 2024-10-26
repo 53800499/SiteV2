@@ -131,7 +131,6 @@ a{
     display: flex;
 }
 
-
 h1 {
     font-size: 3rem;
 }
@@ -140,6 +139,79 @@ footer{
     font-size: 1.3em;
 }
 
+@media (max-width: 1245px) {
+    .p-menu{
+        font-size: 1.4em;
+    }
+    .text{
+        font-size: 2.8em;
+    }
+}
+@media (max-width: 1026px) {
+    .p-menu{
+        font-size: 1.2em;
+    }
+    .text{
+        font-size: 2.8em;
+    }
+    footer{
+        font-size: 1.1em;
+    }
+    .menuisier{
+        padding: 20px;
+        height: 200px;
+        }
+    .category-image{
+        padding: unset;
+    }
+}
+
+
+/* Ajustements d'image */
+.category-image {
+    width: 100%;
+    height: auto; /* S'adapte à la hauteur de l'image */
+    overflow: hidden;
+}
+
+.category-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplit le conteneur tout en gardant le rapport d'image */
+}
+
+/* Texte responsive */
+.category-name {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 5px;
+    width: 100%;
+    font-size: 1.5rem; /* Taille par défaut pour les écrans moyens */
+
+    /* Taille de police responsive */
+}
+
+@media (max-width: 768px) {
+    .category-name {
+        font-size: 1.25rem; /* Plus petit pour écrans moyens et petits */
+    }
+}
+
+@media (max-width: 576px) {
+    .category-name {
+        font-size: 1rem; /* Encore plus petit pour très petits écrans */
+    }
+}
+
+
+
+
+
+@media (min-width: 996px) {
+    
+}
 @media (min-width: 993px) {
     video{
         min-height: 250px;
@@ -159,6 +231,13 @@ footer{
      .bois{
         width: 237px;
      }
+     .menuisier{
+        max-height: 150px;
+     }
+     #videoElement{
+        height: 200px;
+        width: 200px;
+     }
 }
 
 @media (max-width: 768px) {
@@ -169,11 +248,23 @@ footer{
         width: unset;
         margin-bottom: 10px;
      }
+     .text{
+        font-size: 1.9em;
+     }
+     footer{
+        font-size: 0.9em;
+    }
+    h2{
+        font-size: 1.8em;
+    }
 }
 
-@media (max-width: 664px) {
+@media (max-width: 669px) {
     .section-menu {
         font-size: 2em;
+    }
+    h2{
+        font-size: 2.4em;
     }
 }
 @media (max-width: 610px) {
@@ -205,10 +296,10 @@ footer{
     
 }
 
-@media (max-width: 372px) {
+@media (max-width: 449px) {
     .navbar-brand-logo {
-        height: 40px;
-        width: 200px;
+        height: 30px;
+        width: 195px;
         font-size: 1.3em;
     } 
     .text{
@@ -231,6 +322,45 @@ footer{
     }
     
     
+}
+@media (max-width: 372px) {
+    .navbar-brand-logo {
+        height: 40px;
+        width: 200px;
+        font-size: 1.3em;
+    } 
+    .text{
+       font-size: 1.5em;
+       text-align: start;
+       justify-content: baseline;
+    }
+    .menuisier{
+        *{
+            font-size: 1em;
+        }
+        font-size: 1.2em;
+        clip-path: polygon(
+             0 0,        /* Point A : Coin supérieur gauche */
+             100% 0,     /* Point B : Coin supérieur droit */
+             100% 85%,  /* Point C : Coin inférieur droit */
+             70% 80%,    /* Point D : Premier point de courbe simulé, à 90% de la largeur et 80% de la hauteur */
+             0 100%      /* Point G : Coin inférieur gauche */
+         ); 
+    }
+    .section-menu{
+        font-size: 1.1em;
+    }
+    .p-menu{
+        font-size: 1em;
+        text-align: unset;
+    }
+    .foot{
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 372px) {
+
 }
 
 
