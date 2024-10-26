@@ -101,7 +101,7 @@
                 <!-- Section vidéo -->
                 <div class="col-md-4">
                     <div class="video-container">
-                        <video controls class="w-100 h-100">
+                        <video controls class="w-100 h-100" id="videoElement">
                             <source src="video/parallaxe.mp4" type="video/mp4">
                             Votre navigateur ne prend pas en charge la balise vidéo.
                         </video>
@@ -208,14 +208,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 joind-img">
+                <div class="col-md-4 joind-img joind-img1">
                     <div class="category-image position-relative bois">
                         <img src="img/Bois-noir.png" alt="Catégorie 2" class="img-fluid custom-img ">
                         <div class="category-name position-absolute w-100 text-center" 
                             style="top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; padding: 5px;">
                             <h4>Adresse e-mail</h4>
                             <div class="para"><a href="#">johnnywoodword1972@gmail.com</a></div>
-                            <div class="para">WhatsApp : (+590) 690 63 11 49</div>
+                            <div class="para para1">WhatsApp : (+590) 690 63 11 49</div>
                         </div>
                     </div>
                 </div>
@@ -252,17 +252,19 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const videoElement = document.getElementById('videoElement');
-    
-            // Démarrer la lecture lors du survol
-            videoElement.addEventListener('mouseenter', function () {
-                videoElement.play();
-            });
-    
-            // Mettre sur pause lors de la sortie du survol
-            videoElement.addEventListener('mouseleave', function () {
-                videoElement.pause();
-                videoElement.currentTime = 0; // Remettre à zéro la vidéo si tu veux qu'elle redémarre à chaque survol
-            });
+
+        // Démarrer la lecture sans audio lors du survol
+        videoElement.addEventListener('mouseenter', function () {
+            videoElement.muted = true; // Désactiver le son
+            videoElement.play();
+        });
+
+        // Mettre sur pause lors de la sortie du survol
+        videoElement.addEventListener('mouseleave', function () {
+            videoElement.pause();
+            videoElement.currentTime = 0; // Remettre à zéro la vidéo si tu veux qu'elle redémarre à chaque survol
+        });
+
         });
     </script>
     

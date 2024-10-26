@@ -80,6 +80,15 @@ a{
     padding: 50px;
   
 }
+/* Masquer le div par défaut */
+.para1 {
+    display: none;
+}
+
+/* Afficher le div lorsque le parent est survolé */
+.joind-img1:hover .para1 {
+    display: block;
+}
 .menuisier{
     clip-path: polygon(
         0 0,        /* Point A : Coin supérieur gauche */
@@ -128,9 +137,14 @@ h1 {
 }
 
 .footer{
-    font-size: 1.2em;
+    font-size: 1.2pas em;
 }
 
+@media (min-width: 993px) {
+    video{
+        min-height: 250px;
+    }
+}
 @media (max-width: 993px) {
     .text{
         font-size: 2.2rem;
