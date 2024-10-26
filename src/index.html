@@ -21,14 +21,14 @@
                 <img src="img/Brand.png" alt="logo" class="navbar-brand-logo m-0" style="min-width: 122px; min-height: 62px;">
             </a>
     
-            <!-- Toggle button for mobile view -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- Toggle button for mobile view (sans data-bs-toggle) -->
+            <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
     
             <!-- Contact Information -->
             <div class="collapse navbar-collapse px-5" id="navbarSupportedContent">
-                <div class="d-flex ms-auto flex-wrap justify-content-center align-items-centers" style="align-items: flex-start;">
+                <div class="d-flex ms-auto flex-wrap justify-content-center align-items-center" style="align-items: flex-start;">
                     <!-- Location -->
                     <div class="d-flex align-items-start me-4 mt-2 mb-lg-0">
                         <img src="img/location.png" alt="Map Icon" class="fa-lg mt-2" style="width: 24px; height: 24px;">
@@ -251,22 +251,11 @@
     
     
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const navbarToggler = document.querySelector(".navbar-toggler");
-          const navbarContent = document.querySelector("#navbarSupportedContent");
-      
-          // Ajoute un écouteur de clic sur le bouton de navigation
-          navbarToggler.addEventListener("click", function () {
-            if (navbarContent.classList.contains("show")) {
-              navbarContent.classList.remove("show"); // Masque la barre si elle est affichée
-            } else {
-              navbarContent.classList.add("show"); // Affiche la barre si elle est masquée
-            }
-          });
-        });
-      </script>
-      
-    <script>
+        document.querySelector('.navbar-toggler').addEventListener('click', function () {
+        const navbarContent = document.getElementById('navbarSupportedContent');
+        navbarContent.classList.toggle('show');  // Basculer la classe 'show' à chaque clic
+    });
+
         document.addEventListener('DOMContentLoaded', function () {
             const videoElement = document.getElementById('videoElement');
 

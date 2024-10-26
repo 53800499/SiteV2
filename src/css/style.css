@@ -167,12 +167,7 @@ footer{
 }
 
 
-/* Ajustements d'image */
-.category-image {
-    width: 100%;
-    height: auto; /* S'adapte à la hauteur de l'image */
-    overflow: hidden;
-}
+
 
 .category-img {
     width: 100%;
@@ -187,15 +182,15 @@ footer{
     transform: translate(-50%, -50%);
     color: white;
     padding: 5px;
-    width: 100%;
-    font-size: 2.1em; /* Taille par défaut pour les écrans moyens */
+    min-width: 200px;
+    font-size: 1.8em; /* Taille par défaut pour les écrans moyens */
 
     /* Taille de police responsive */
 }
 
 @media (max-width: 768px) {
     .category-name {
-        font-size: 1.25rem; /* Plus petit pour écrans moyens et petits */
+        font-size: 2.2em; /* Plus petit pour écrans moyens et petits */
     }
 }
 
