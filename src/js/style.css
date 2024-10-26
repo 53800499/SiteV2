@@ -1,19 +1,28 @@
 @font-face {
     font-family: 'blacks';
-    src: url('/src/fonts/poppins-font/Poppins-Bold.ttf') format('truetype');
+    src: url('/src/fonts/poppins-font/Poppins-SemiBold.ttf') format('truetype');
     font-weight: normal; /* ou bold selon votre police */
     font-style: normal; /* ou italic selon votre police */
 }
 @font-face {
-    font-family: 'bien';
-    src: url('/src/fonts/poppins-font/Poppins-Italic.ttf') format('truetype');
+    font-family: 'tous';
+    src: url('/src/fonts/poppins-font/Poppins-Regular.ttf') format('truetype');
     font-weight: normal; /* ou bold selon votre police */
     font-style: normal; /* ou italic selon votre police */
 }
 
+@font-face {
+    font-family: 'titre'; /* Nom de la police que tu vas utiliser dans le reste du CSS */
+    src: url('/src/fonts/optiradiant-heavy-regular-font/optiradiant-heavy.otf') format('opentype'); /* Chemin vers la police */
+    font-weight: normal; /* Optionnel : Tu peux aussi définir un poids */
+    font-style: normal;  /* Optionnel : Style normal ou italic */
+}
+
+
 
 *{
     font-size: 1em;
+    font-family:'tous' ;
 }
 
 .navbar-custom {
@@ -30,6 +39,22 @@
     height: 40px;
 }
 
+.navbar-text{
+    padding:0;
+}
+
+h1{
+    font-family: 'titre';
+}
+
+.sous-titre{
+    font-family: 'blacks';
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
 
 /* Menusier */
 .wood-background {
@@ -48,9 +73,11 @@
 }
  
 .section-text, .text  {
-    color: #7a5230; /* Couleur approximative du bois blacks*/      
+    color: #B87333; /* Brown-like color */
     font-family: blacks;
-    font-size: 50px;
+    font-size: 3.4em;
+    font-family: 'titre';
+    padding: 50px;
   
 }
 .menuisier{
@@ -62,14 +89,14 @@
         0 100%      /* Point G : Coin inférieur gauche */
     );
     padding: 20px;
-    height: 150px;
+    height: 300px;
     }
 
     .menuisiers{
         clip-path: polygon(
         0 40%,         /* Point A : Coin inférieur gauche (inversé) */
         70% 0,         /* Point B : Premier point courbe simulé (inversé) */
-        100% 10%,        /* Point C : Coin supérieur droit */
+        100% 50%,        /* Point C : Coin supérieur droit */
         100% 100%,     /* Point D : Coin inférieur droit */
         0 100%         /* Point E : Coin inférieur gauche */
     );
@@ -88,11 +115,20 @@
 }
 
 .p-menu{
-    font-size: 1.3em;
+    font-size: 1.6em;
 }
+
+.align-horizontal {
+    display: flex;
+}
+
 
 h1 {
     font-size: 3rem;
+}
+
+.footer{
+    font-size: 1.2em;
 }
 
 @media (max-width: 993px) {
