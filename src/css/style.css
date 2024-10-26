@@ -188,7 +188,7 @@ footer{
     color: white;
     padding: 5px;
     width: 100%;
-    font-size: 1.5rem; /* Taille par défaut pour les écrans moyens */
+    font-size: 2.1em; /* Taille par défaut pour les écrans moyens */
 
     /* Taille de police responsive */
 }
@@ -201,7 +201,7 @@ footer{
 
 @media (max-width: 576px) {
     .category-name {
-        font-size: 1rem; /* Encore plus petit pour très petits écrans */
+        font-size: 1.4em; /* Encore plus petit pour très petits écrans */
     }
 }
 
@@ -255,7 +255,7 @@ footer{
         font-size: 0.9em;
     }
     h2{
-        font-size: 1.8em;
+        font-size: 4em;
     }
 }
 
