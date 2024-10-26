@@ -192,6 +192,9 @@ footer{
     .category-name {
         font-size: 2.2em; /* Plus petit pour écrans moyens et petits */
     }
+    .text{
+        font-size: 2.8em;
+    }
 }
 
 @media (max-width: 576px) {
@@ -260,6 +263,9 @@ footer{
     }
     h2{
         font-size: 2.4em;
+    }
+    .menuisier{
+        font-size: 0.9em;
     }
 }
 @media (max-width: 610px) {
