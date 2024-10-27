@@ -55,6 +55,16 @@ a{
     text-decoration: none;
     color: white;
 }
+/* Nav-bar color */
+.icon-style {
+    width: 24px;
+    height: 24px;
+    color: #D2691E; /* Chocolate color */
+    filter: invert(39%) sepia(73%) saturate(469%) hue-rotate(10deg) brightness(88%) contrast(96%);
+}
+.navbar .sous-titre, .navbar .navbar-text {
+    color: #333; /* Adjust for readability */
+}
 
 /* Menusier */
 .wood-background {
