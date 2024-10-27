@@ -56,7 +56,7 @@ a{
     color: white;
 }
 /* Nav-bar color */
-.icon-style {
+.d-block {
     width: 24px;
     height: 24px;
     color: #D2691E; /* Chocolate color */
