@@ -1,0 +1,412 @@
+@font-face {
+    font-family: 'blacks';
+    src: url('/src/fonts/poppins-font/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: normal; /* ou bold selon votre police */
+    font-style: normal; /* ou italic selon votre police */
+}
+@font-face {
+    font-family: 'tous';
+    src: url('/src/fonts/poppins-font/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal; /* ou bold selon votre police */
+    font-style: normal; /* ou italic selon votre police */
+}
+
+@font-face {
+    font-family: 'titre'; /* Nom de la police que tu vas utiliser dans le reste du CSS */
+    src: url('/src/fonts/optiradiant-heavy-regular-font/optiradiant-heavy.otf') format('opentype'); /* Chemin vers la police */
+    font-weight: normal; /* Optionnel : Tu peux aussi définir un poids */
+    font-style: normal;  /* Optionnel : Style normal ou italic */
+}
+
+
+
+*{
+    font-size: 1em;
+    font-family:'tous' ;
+}
+
+.navbar-custom {
+    background-color: white;
+    border-bottom: 1px solid #e1e1e1;
+}
+.icon {
+    color: #B87333; /* Brown-like color */
+}
+.navbar-text {
+    font-size: 12px;
+    }
+.navbar-brand-logo {
+    height: 40px;
+}
+
+.navbar-text{
+    padding:0;
+}
+
+h1{
+    font-family: 'titre';
+}
+
+.sous-titre{
+    font-family: 'blacks';
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Menusier */
+.wood-background {
+    background-image: url('/src/img/wood-2045380_1280.jpg'); 
+    background-size: cover;
+    image-rendering: crisp-edges;
+    background-attachment: fixed; /* Pour parallax */
+    background-position: center;
+    color: white;
+}
+
+
+.paragraph{
+    color: white;
+    font-size: 1rem;
+    justify-content: center;
+}
+ 
+.section-text, .text  {
+    color: #B87333; /* Brown-like color */
+    font-family: blacks;
+    font-size: 3.4em;
+    font-family: 'titre';
+    padding: 50px;
+  
+}
+/* Masquer le div par défaut */
+.para1 {
+    display: none;
+}
+
+/* Afficher le div lorsque le parent est survolé */
+.joind-img1:hover .para1 {
+    display: block;
+}
+.menuisier{
+    clip-path: polygon(
+        0 0,        /* Point A : Coin supérieur gauche */
+        100% 0,     /* Point B : Coin supérieur droit */
+        100% 90%,  /* Point C : Coin inférieur droit */
+        70% 70%,    /* Point D : Premier point de courbe simulé, à 90% de la largeur et 80% de la hauteur */
+        0 100%      /* Point G : Coin inférieur gauche */
+    );
+    padding: 20px;
+    height: 300px;
+    }
+
+    .menuisiers{
+        clip-path: polygon(
+        0 40%,         /* Point A : Coin inférieur gauche (inversé) */
+        70% 0,         /* Point B : Premier point courbe simulé (inversé) */
+        100% 50%,        /* Point C : Coin supérieur droit */
+        100% 100%,     /* Point D : Coin inférieur droit */
+        0 100%         /* Point E : Coin inférieur gauche */
+    );
+    height: 90px;
+    }
+
+.paragraphs{
+    color: white;
+    font-size: 10px;
+}
+
+.custom-img {
+    width: 100%; /* Largeur pleine du conteneur */
+    height: 140px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* Couvrir l'élément sans déformation */
+}
+
+.p-menu{
+    font-size: 1.6em;
+}
+
+.align-horizontal {
+    display: flex;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+footer{
+    font-size: 1.3em;
+}
+
+@media (max-width: 1245px) {
+    .p-menu{
+        font-size: 1.4em;
+    }
+    .text{
+        font-size: 2.8em;
+    }
+}
+@media (max-width: 1026px) {
+    .p-menu{
+        font-size: 1.2em;
+    }
+    .text{
+        font-size: 2.8em;
+    }
+    footer{
+        font-size: 1.1em;
+    }
+    .menuisier{
+        padding: 20px;
+        height: 200px;
+        }
+    .category-image{
+        padding: unset;
+    }
+}
+
+
+
+
+.category-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplit le conteneur tout en gardant le rapport d'image */
+}
+
+/* Texte responsive */
+.category-name {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 5px;
+    min-width: 200px;
+    font-size: 1.8em; /* Taille par défaut pour les écrans moyens */
+
+    /* Taille de police responsive */
+}
+
+@media (max-width: 768px) {
+    .category-name {
+        font-size: 2.2em; /* Plus petit pour écrans moyens et petits */
+    }
+    .text{
+        font-size: 2.8em;
+    }
+}
+
+@media (max-width: 576px) {
+    .category-name {
+        font-size: 1.4em; /* Encore plus petit pour très petits écrans */
+    }
+}
+
+
+
+
+
+@media (min-width: 996px) {
+    
+}
+@media (min-width: 993px) {
+    video{
+        min-height: 250px;
+    }
+}
+@media (max-width: 993px) {
+    .text{
+        font-size: 2.2rem;
+        padding-top: 0;
+    }
+    /* .joind-img{
+        margin-bottom: 10px;575
+    } */
+     .para{
+        font-size: 15px;
+     }
+     .bois{
+        width: 237px;
+     }
+     .menuisier{
+        max-height: 150px;
+     }
+     #videoElement{
+        height: 200px;
+        width: 200px;
+     }
+}
+
+@media (max-width: 768px) {
+    .para{
+        font-size: unset;
+     }
+     .bois{
+        width: unset;
+        margin-bottom: 10px;
+     }
+     .text{
+        font-size: 1.9em;
+     }
+     footer{
+        font-size: 0.9em;
+    }
+    h2{
+        font-size: 4em;
+    }
+}
+
+@media (max-width: 669px) {
+    .section-menu {
+        font-size: 2em;
+    }
+    h2{
+        font-size: 2.4em;
+    }
+    .menuisier{
+        font-size: 0.9em;
+    }
+}
+@media (max-width: 610px) {
+    .section-menu {
+        font-size:30px ;
+    }
+    .menuisier{
+        clip-path: polygon(
+            0 0,        /* Point A : Coin supérieur gauche */
+            100% 0,     /* Point B : Coin supérieur droit */
+            100% 90%,  /* Point C : Coin inférieur droit */
+            70% 80%,    /* Point D : Premier point de courbe simulé, à 90% de la largeur et 80% de la hauteur */
+            0 100%      /* Point G : Coin inférieur gauche */
+        );
+        padding: 20px;
+        height: 150px;
+        }
+
+        .menuisiers{
+            clip-path: polygon(
+            0 50%,         /* Point A : Coin inférieur gauche (inversé) */
+            70% 0,         /* Point B : Premier point courbe simulé (inversé) */
+            100% 10%,        /* Point C : Coin supérieur droit */
+            100% 100%,     /* Point D : Coin inférieur droit */
+            0 100%         /* Point E : Coin inférieur gauche 372*/
+        );
+        height: 90px;
+        }
+    
+}
+
+@media (max-width: 449px) {
+    .navbar-brand-logo {
+        height: 30px;
+        width: 195px;
+        font-size: 1.3em;
+    } 
+    .text{
+       font-size: 1.7em;
+       text-align: start;
+       justify-content: baseline;
+    }
+    .menuisier{
+        *{
+            font-size: 1.2em;
+        }
+        font-size: 1.2em;
+        clip-path: polygon(
+             0 0,        /* Point A : Coin supérieur gauche */
+             100% 0,     /* Point B : Coin supérieur droit */
+             100% 85%,  /* Point C : Coin inférieur droit */
+             70% 80%,    /* Point D : Premier point de courbe simulé, à 90% de la largeur et 80% de la hauteur */
+             0 100%      /* Point G : Coin inférieur gauche */
+         ); 
+    }
+    
+    
+}
+@media (max-width: 372px) {
+    .navbar-brand-logo {
+        height: 40px;
+        width: 200px;
+        font-size: 1.3em;
+    } 
+    .text{
+       font-size: 1.5em;
+       text-align: start;
+       justify-content: baseline;
+    }
+    .menuisier{
+        *{
+            font-size: 1em;
+        }
+        font-size: 1.2em;
+        clip-path: polygon(
+             0 0,        /* Point A : Coin supérieur gauche */
+             100% 0,     /* Point B : Coin supérieur droit */
+             100% 85%,  /* Point C : Coin inférieur droit */
+             70% 80%,    /* Point D : Premier point de courbe simulé, à 90% de la largeur et 80% de la hauteur */
+             0 100%      /* Point G : Coin inférieur gauche */
+         ); 
+    }
+    .section-menu{
+        font-size: 1.1em;
+    }
+    .p-menu{
+        font-size: 1em;
+        text-align: unset;
+    }
+    .foot{
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 372px) {
+
+}
+
+
+/* Définir l'animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0; /* Invisible au début */
+        transform: translateY(20px); /* Décalage vers le bas */
+    }
+    100% {
+        opacity: 1; /* Visible à la fin */
+        transform: translateY(0); /* Retour à la position d'origine */
+    }
+}
+
+/* Appliquer l'animation aux titres */
+.text {
+    animation: fadeInUp 0.7s ease-in-out forwards; /* Durée de l'animation et style */
+    opacity: 0; /* Assurez-vous qu'il est invisible au début */
+}
+
+/* Ajouter un délai d'animation pour les autres titres si nécessaire */
+h1 {
+    animation-delay: 0.3s; /* Délai avant que l'animation commence */
+}
+
+.text:hover {
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+    transition: transform 0.3s; /* Durée de l'effet de transition */
+}
+
+
+.video-placeholder {
+    position: relative; /* Pour le positionnement de l'élément vidéo */
+    overflow: hidden; /* Pour masquer tout débordement */
+}
+
+.video-placeholder video {
+    transition: transform 0.3s; /* Animation de transition */
+}
+
+.video-placeholder:hover video {
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+
+
