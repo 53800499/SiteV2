@@ -58,10 +58,9 @@ a{
 
 /* Menusier */
 .wood-background {
-    background-image: url('/src/img/wood-2045380_1280.jpg'); 
+    background-image: url('/src/img/wood-2045380_1280.jpg');
     background-size: cover;
-    image-rendering: crisp-edges;
-    background-attachment: fixed; /* Pour parallax */
+    background-attachment: relative; /* Pour parallax */
     background-position: center;
     color: white;
 }
